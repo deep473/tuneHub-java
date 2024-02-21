@@ -1,0 +1,75 @@
+/* admin.css */
+body {
+    background-color: #484c4d; /* Light grey background */
+    color: #ffcd31; /* Golden text color for contrast */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    color: #ff7e26; /* Orange for headers */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+a {
+    display: inline-block;
+    background-color: #62856d; /* Greenish background for links */
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+a:hover {
+    background-color: #ff7e26; /* Orange background on hover */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input[type=text], input[type=email], input[type=password], textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #62856d; /* Greenish border */
+    width: 50%;
+}
+
+input[type=submit] {
+    background-color: #ff7e26; /* Orange for submit buttons */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+table {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid #ffcd31; /* Golden border for tables */
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #62856d; /* Greenish background for table headers */
+}
+
+audio {
+    width: 100%;
+    max-width: 250px;
+}

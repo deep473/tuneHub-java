@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>View Playlists</title>
+<link href="admin.css" rel="stylesheet">
+</head>
+<body>
+<table border>
+    <thead>
+        <tr>
+            <th>Playlist ID</th>
+            <th>Playlist NAME</th>
+            <th>Playlist SONGS</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Dynamic content with Thymeleaf -->
+        <tr th:each="playlist : ${plist}">
+            <td th:text="${playlist.id}"></td>
+            <td th:text="${playlist.name}"></td>
+            <td>
+                <ul>
+                    <li th:each="song : ${playlist.songs}">
+                        <span th:text="${song.name}"></span>
+                        <audio controls>
+                            <source th:src="${song.link}" type="audio/mpeg"></source>
+                        </audio>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>

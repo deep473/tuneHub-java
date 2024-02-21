@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Create Playlist</title>
+<link href="admin.css" rel="stylesheet">
+</head>
+<body>
+<form action="/addplaylist" method="post">
+<label>Playlist Name:</label>
+<input type="text" name="name">
+<br/>
+<!-- Assuming dynamic content rendering with Thymeleaf -->
+<div th:each="song : ${songslist}">
+    <input type="checkbox" th:name="songs" th:value="${song.id}">
+    <label th:text="${song.name}"></label>
+</div>
+<input type="submit" value="ADD PLAYLIST">
+</form>
+</body>
+</html>
